@@ -1,0 +1,84 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Register",
+              "align": "center",
+              "contents": []
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+          "size": "full",
+          "aspectRatio": "1.51:1",
+          "aspectMode": "fit"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Register",
+                "uri": ""
+              },
+              "color": "#37C84AFF",
+              "style": "primary"
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Member",
+              "align": "center",
+              "contents": []
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+          "size": "full",
+          "aspectRatio": "1.51:1",
+          "aspectMode": "fit",
+          "backgroundColor": "#FFFFFFFF"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "MemberCard",
+                "uri": ""
+              },
+              "color": "#37C84AFF",
+              "style": "primary"
+            }
+          ]
+        }
+      }
+    ]
+  }
