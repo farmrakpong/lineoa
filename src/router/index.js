@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
+let { lineOAWebHook, lineOAWebHooktest } = require('../controller/lineOAWebHook');
+let { registerUser } = require('../controller/registerUser');
+let { findUser } = require('../controller/findUser');
+let { check } = require('../../middleware/checklLineUID');
 
-let {lineOAWebHook} = require('../controller/lineOAWebHook');
-let {registerUser} = require('../controller/registerUser');
 
-
-router.post('/webhook',lineOAWebHook);
-router.post('/registeruser',registerUser);
+router.post('/webhook', lineOAWebHooktest);
+router.get('/finduser',check, findUser);
+router.post('/registeruser', check,registerUser);
 
 module.exports = router;

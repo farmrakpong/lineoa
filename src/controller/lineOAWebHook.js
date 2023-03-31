@@ -1,4 +1,4 @@
-const knex = require('../../db/index');
+// const knex = require('../../db/index');
 // const sqlrequest = require('../query');
 // const bcrypt = require('bcrypt');
 const line = require('@line/bot-sdk');
@@ -7,12 +7,19 @@ const https = require("https")
 const axios = require('axios');
 let carousel = require('../../carousel.json')
 let flex = require('../../flex.json')
+let flexC = require('../../flexC.json')
+let flexOne = require('../../flexOne.json')
+let { handleEvent } = require('../service/line/lineService')
 require('dotenv').config();
 // console.log(process.env.TOKEN);
 // console.log(flex.footer.contents[0].action.uri);
 const TOKEN = process.env.TOKEN
 const fs = require("fs");
-
+// const config = {
+//     channelAccessToken: "xR8RCxQ1Udbz3GVkGmeN/Jsg5wYqd/qLggnZvCpSjnyrH+TAJ3s7JTxjRaUt3E8I2v27kwT3i77blvVmrkZNzsGgT3DjDYa8zL8dZBJXPymLrmGie/xWsdxrxFd6IprjOaqwj+sYYHyZ03svIz/lcAdB04t89/1O/w1cDnyilFU=",
+//     channelSecret: "ae09d342ea504908830d4ae514023430"
+// };
+// const client = new line.Client(config);
 const lineOAWebHook = async(req, res) => {
     // console.log('req.body =>', JSON.stringify(req.body, null, 2)) //สิ่งที่ Line ส่งมา
     res.send("HTTP POST request sent to the webhook URL!")
@@ -118,6 +125,43 @@ const lineOAWebHook = async(req, res) => {
     }
 }
 
+
+const lineOAWebHooktest = async(req, res) => {
+    // line.middleware(config)
+    Promise
+        .all(req.body.events.map(handleEvent))
+        .then((result) => res.json(result));
+}
+
+
+
+
+// function handleMessageEvent(event) {
+//     var msg = {
+//         type: 'text',
+//         text: 'สวัสดีครัช'
+//     };
+
+//     var eventText = event.message.text.toLowerCase();
+
+//     if (eventText === '*membership') {
+//         msg = flexOne
+//     }  else if (eventText === '*service') {
+//         msg = flexC
+//     } else {
+//       msg = {
+//         "type": "text",
+//         "text": "Hello",
+//         "sender": {
+//           "iconUrl": "https://obs.line-scdn.net/0h0SPtfh7_b3xtDX05CSkQKz9QZB5eb3F3Tzl7GwNxRyxFbl1VFTl7aRFybTcIRndWWTt_akl2bixIb2BBUQpFbkxzSCcFbipdGhRVZQtxRDwcbU0rGTtm/f256x256"
+//         }
+//       }
+//     }
+
+//     return client.replyMessage(event.replyToken, msg);
+// }
+
 module.exports = {
     lineOAWebHook,
+    lineOAWebHooktest
 }

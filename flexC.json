@@ -1,0 +1,96 @@
+{
+    "type": "flex",
+    "altText": "this is a flex message",
+    "contents": {
+        "type": "carousel",
+        "contents": [
+          {
+            "type": "bubble",
+            "direction": "ltr",
+            "header": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Register",
+                  "align": "center",
+                  "contents": []
+                }
+              ]
+            },
+            "hero": {
+              "type": "image",
+              "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+              "size": "full",
+              "aspectRatio": "1.51:1",
+              "aspectMode": "fit"
+            },
+            "footer": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "uri",
+                    "label": "Register",
+                    "uri": "https://linecorp.com"
+                  },
+                  "color": "#37C84AFF",
+                  "style": "primary"
+                }
+              ]
+            },
+            "styles": {
+              "header": {
+                "backgroundColor": "#FFFFFFFF"
+              }
+            }
+          },
+          {
+            "type": "bubble",
+            "direction": "ltr",
+            "header": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Member",
+                  "align": "center",
+                  "contents": []
+                }
+              ]
+            },
+            "hero": {
+              "type": "image",
+              "url": "https://vos.line-scdn.net/bot-designer-template-images/bot-designer-icon.png",
+              "size": "full",
+              "aspectRatio": "1.51:1",
+              "aspectMode": "fit",
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "footer": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "uri",
+                    "label": "MemberCard",
+                    "uri": "https://linecorp.com"
+                  },
+                  "color": "#37C84AFF",
+                  "style": "primary"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "sender": {
+        "iconUrl": "https://obs.line-scdn.net/0h0SPtfh7_b3xtDX05CSkQKz9QZB5eb3F3Tzl7GwNxRyxFbl1VFTl7aRFybTcIRndWWTt_akl2bixIb2BBUQpFbkxzSCcFbipdGhRVZQtxRDwcbU0rGTtm/f256x256"
+      }
+}
