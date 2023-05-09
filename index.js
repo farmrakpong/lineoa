@@ -17,9 +17,31 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use('/', router)
-app.get('/getpro', async(req, res) => {
-    res.send("hi");
+app.post('/getpro', async(req, res) => {
+    var data = '';
+    console.log(req.body);
+    req.on('data', function(chunk) {
+        console.log(chunk);
+      data += chunk;
+    });
+     req.on('end', function() {
+    //   console.log(data);
+    });
+    // res.send(data);
 })
+app.get('/test888', async(req, res) => {
+    // var data = '';
+    // console.log(req.body);
+    // req.on('data', function(chunk) {
+    //     console.log(chunk);
+    //   data += chunk;
+    // });
+    //  req.on('end', function() {
+    // //   console.log(data);
+    // });
+    res.send("data");
+})
+
 
 
 
